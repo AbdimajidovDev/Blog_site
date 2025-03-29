@@ -1,0 +1,13 @@
+<div class="paginator">
+    <span class="step-links">
+        {% if page.has_previous %} <!-- has_previous => agar undan oldin page bo'lsa Avvalgi so'zi ko'rinadi-->
+        <a href="?page={{ page.previous_page_number }}">Avvalgi</a>
+        {% endif %}
+        <span class="current">
+            Page {{ page.number }} of {{ page.paginator.num_pages }}.
+        </span>
+        {% if page.has_next %} <!-- has_next => agar undan keyin page bo'lsa Keyingi so'zi ko'rinadi-->
+            <a href="?page={{ page.previous_page_number }}">Keyingi</a>
+        {% endif %}
+    </span>
+</div>
