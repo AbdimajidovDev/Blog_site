@@ -1,5 +1,6 @@
-import os.path
 from pathlib import Path
+
+from django.conf.global_settings import EMAIL_BACKEND, EMAIL_HOST
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #local apps
     'blogapp',
 ]
 
@@ -112,3 +115,10 @@ STATICFILES_DIRS = [BASE_DIR.joinpath('static')]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EMailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'Elektronpochtangiz@gmail.com'
+# EMAIL_HOST_PASSWORD = 'parolingiz'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True

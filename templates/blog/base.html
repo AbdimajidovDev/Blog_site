@@ -5,20 +5,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>{% block title %}{% endblock %}</title>
-<link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 </head>
 <body>
 
-<div id="content">
-    {% block content %}
-    {% endblock %}
-</div>
+<!--<a href="">Home</a>-->
+    <div id="content">
+        <a href="{% url 'blogapp:post_list' %}"><h1>Home</h1></a>
+        {% block content %}
+        {% endblock %}
+    </div>
 
-<div id="sidebar">
-    <h2>IT-Yangiliklar</h2>
-    <p>Informatsion texnalogiyalarga oid yangiliklar</p>
-</div>
+    <div id="sidebar">
+        <h2>IT-Yangiliklar</h2>
+        <p>Informatsion texnalogiyalarga oid yangiliklar</p>
+    </div>
 
 </body>
 </html>
